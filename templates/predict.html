@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartCare | Predict</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/title.png">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../static/css/predict.css">
+</head>
+<body>
+  
+<!-- header section starts  -->
+<header class="header">
+
+    <a href="{{url_for('home')}}" class="logo"> <i class="fas fa-heartbeat"></i> HeartCare </a>
+
+    <nav class="navbar">
+        <a href="{{url_for('home')}}">home</a>
+        <a href="{{url_for('predict')}}">predict</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- Form section starts -->
+<br><br><br><br><br><br>
+<h1 class="heading"> <span>Prediction</span> System </h1>
+<br>
+<h2 style="color: green;">{{positive_result}}</h2>
+<h2 style="color: red;">{{negative_result}}</h2>
+<br>
+<div class="container">
+<form action='/predict' method="post">
+  <label for="age" style="font-size: 16px;">Age</label>
+  <input type="text" id="age" name="age" placeholder="Your age..">
+  <label for="sex" style="font-size: 16px;">Gender**</label>
+  <input type="text" id="sex" name="sex" placeholder="Your Gender.."><p style="margin-top: -10px; font-size: 12px;">**Enter '1' for male and '0' for female</p><br>
+  <label for="cp" style="font-size: 16px;">CP Value</label>
+  <input type="text" id="cp" name="cp" placeholder="Enter CP value">
+  <label for="trestbps" style="font-size: 16px;">Trestbps Value</label>
+  <input type="text" id="trestbps" name="trestbps" placeholder="Enter trestbps value">
+  <label for="chal" style="font-size: 16px;">chal value</label>
+  <input type="text" id="chal" name="chal" placeholder="Enter chal value">
+  <label for="fbs" style="font-size: 16px;">fbs Value</label>
+  <input type="text" id="fbs" name="fbs" placeholder="Enter fbs value">
+  <label for="restcg" style="font-size: 16px;">restcg value</label>
+  <input type="text" id="restcg" name="restcg" placeholder="Enter restcg value">
+  <label for="thalach" style="font-size: 16px;">thalach value</label>
+  <input type="text" id="thalach" name="thalach" placeholder="Enter thalach value">
+  <label for="exang" style="font-size: 16px;">exang value</label>
+  <input type="text" id="exang" name="exang" placeholder="Enter exang value">
+  <label for="oldpeak" style="font-size: 16px;">Old Peak value</label>
+  <input type="text" id="oldpeak" name="oldpeak" placeholder="Enter old peak value">
+  <label for="slope" style="font-size: 16px;">Slope Value</label>
+  <input type="text" id="slope" name="slope" placeholder="Enter slope value">
+  <label for="ca" style="font-size: 16px;">ca Value</label>
+  <input type="text" id="ca" name="ca" placeholder="Enter ca value">
+  <label for="thal" style="font-size: 16px;">thal value</label>
+  <input type="text" id="thal" name="thal" placeholder="Enter thal value">
+  <button class="btn">Predict<span class="fas fa-chevron-right"></span></button>
+</form>
+</div>
+<!-- Form Section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="{{url_for('home')}}"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="{{url_for('predict')}}"><i class="fas fa-chevron-right"></i> Predict</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +91 96528-68686</a>
+            <a href="https://mail.google.com/mail/u/2/#inbox?compose=GFrJzjZmdmkLTBchSRSxMmVHtXVCZmTLVPbbxWTjxcjBVllFwNtfNJJtnHFNgbGZWVrN" target="_blank"> <i class="fas fa-envelope"></i> heartcare@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Hyderabad, india </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https://twitter.com/"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https://www.youtube.com/"> <i class="fab fa-youtube"></i> YouTube </a>
+            <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i> instagram </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> Copyright &copy; <span>HeartCare.</span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+<!-- custom js file link  -->
+<script src="../static/js/index.js"></script>
+
+</body>
+</html>

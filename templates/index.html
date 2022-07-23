@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartCare</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/title.png">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../static/css/index.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> HeartCare </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="{{url_for('predict')}}">predict</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="../static/images/pic1.png" alt="">
+    </div>
+
+    <div class="content">
+        <h3>Predict your chance of diagnosing with heart disease</h3>
+        <p>Early prediticiton of heart disease can reduce the risk of deaths due to various causes of heart attacks. You can get your prediciton through our heart disease prediction system.</p>
+        <div style="display: flex; justify-content:space-evenly">
+            <a href = "{{ url_for('predict') }}" class="btn"> Predict Now <span class="fas fa-chevron-right"></span> </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="../static/images/pic2.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>We Make Early Prediciton of Heart Disease</h3>
+            <p>Most of the heart disease related deaths cause as they are not identified at begining stage of it.Through our prediticiton system, chance of diagnosing with heart disease can be predicited at an early stage which can reduce the deaths caused by un identified heart diseases.</p><br>
+            <p>Applying "MACHINE LEARNING" in medical field can generate great results by studing the previous records related to heart diseases and can predict the possibility of diagnosing with heart disease. </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="{{url_for('home')}}"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="{{url_for('predict')}}"> <i class="fas fa-chevron-right"></i> Predict</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +91 96528-68686</a>
+            <a href="https://mail.google.com/mail/u/2/#inbox?compose=GFrJzjZmdmkLTBchSRSxMmVHtXVCZmTLVPbbxWTjxcjBVllFwNtfNJJtnHFNgbGZWVrN" target="_blank"> <i class="fas fa-envelope"></i> heartcare@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Hyderabad, india </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https://twitter.com/"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https://www.youtube.com/"> <i class="fab fa-youtube"></i> YouTube </a>
+            <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i> instagram </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> Copyright &copy; <span>HeartCare.</span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="../static/js/index.js"></script>
+
+</body>
+</html>
